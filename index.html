@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+        <title>sample</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <!-- {{ message }} -->
+            <p>{{message}}</p>
+            <!-- <span v-if="seen">Now you see me</span> -->
+            <input v-model="message">
+        </div>
+
+        <div id="app_for">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app_onclick">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">ReverseMessage</button>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
