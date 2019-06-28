@@ -16,7 +16,7 @@
 
         <div id="app_for">
             <ol>
-                <li v-for="todo in todos">
+                <li v-for="todos">
                     {{ todo.text }}
                 </li>
             </ol>
@@ -25,6 +25,16 @@
         <div id="app_onclick">
             <p>{{ message }}</p>
             <button v-on:click="reverseMessage">ReverseMessage</button>
+        </div>
+
+        <div>
+            <ol>
+                <<todo-item>
+                    v-for="item in groceryList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id"
+                </todo-item>
+            </ol>
         </div>
 
         <script src="index.js"></script>
