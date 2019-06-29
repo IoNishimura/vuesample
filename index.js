@@ -41,18 +41,18 @@ let app_onclick = new Vue({
     }
 })
 
-Vue.component('tool-item', {
+Vue.component('todo-item', {
     props: ['todo'],
-    template: '<li>This is a todo</li>'
+    template: '<li>{{ todo.text }}</li>'
 })
 
-vue app_componet = new Vue({
+var app_component = new Vue({
     el: '#app_component',
-    data: [
+    data: {
         groceryList: [
             { id: 0, text: 'Vegetables' },
             { id: 1, text: 'Cheese' },
             { id: 2, text: 'Whatever else humans are  supposed to eats' }
         ]
-    ]
+    }
 })

@@ -27,12 +27,12 @@
             <button v-on:click="reverseMessage">ReverseMessage</button>
         </div>
 
-        <div>
+        <div id="app_component">
             <ol>
-                <<todo-item>
+                <todo-item
                     v-for="item in groceryList"
                     v-bind:todo="item"
-                    v-bind:key="item.id"
+                    v-bind:key="item.id">
                 </todo-item>
             </ol>
         </div>
